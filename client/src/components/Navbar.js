@@ -17,6 +17,7 @@ import {
   AiFillHome,
   AiFillMessage,
   AiOutlineSearch,
+  AiFillMacCommand,
 } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { isLoggedIn, logoutUser } from "../helpers/authHelper";
@@ -67,6 +68,7 @@ const Navbar = () => {
   };
 
   return (
+    
     <Stack mb={2}>
       <Stack
         direction="row"
@@ -79,19 +81,20 @@ const Navbar = () => {
         spacing={!mobile ? 2 : 0}
       >
         <HorizontalStack>
-          <AiFillFileText
+          <AiFillMacCommand
             size={33}
             color={theme.palette.primary.main}
             onClick={() => navigate("/")}
           />
           <Typography
             sx={{ display: mobile ? "none" : "block" }}
+            fontWeight={'bold'}
             variant={navbarWidth ? "h6" : "h4"}
             mr={1}
             color={theme.palette.primary.main}
           >
             {/* <Link to="/" color="inherit"> */}
-              PostIt
+              PostBook
             {/* </Link> */}
           </Typography>
         </HorizontalStack>
